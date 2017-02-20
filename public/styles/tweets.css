@@ -4,6 +4,7 @@ article.tweet {
   border: 1px solid;
   border-radius: 10px;
   border-color: #7e7e7e;
+  margin-top: 10px;
 }
 
 article.tweet:hover {
