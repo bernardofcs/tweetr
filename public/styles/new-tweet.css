@@ -18,10 +18,14 @@ span.counter {
   font-size: 90%;
 }
 
-.new-tweet > form > textarea{
+.new-tweet > form > textarea {
   width:100%;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.new-tweet > form > textarea:focus {
+  border:2px solid #0000b2;
 }
 
 .new-tweet > form > h2{
@@ -31,3 +35,4 @@ span.counter {
 .redify{
   color:red;
 }
+

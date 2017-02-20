@@ -3,7 +3,11 @@
 article.tweet {
   border: 1px solid;
   border-radius: 10px;
-  border-color: #b3b3b3;
+  border-color: #7e7e7e;
+}
+
+article.tweet:hover {
+  border-color: black;
 }
 
 article.tweet > header {
@@ -35,7 +39,7 @@ article.tweet > header > .name {
   margin-left: 8px;
 }
 
-article.tweet > header > .atuser {
+article.tweet > header > .atUser {
   float:right;
   height:100%;
   font-size: 100%;
@@ -51,5 +55,18 @@ article.tweet > footer {
 
 article.tweet > p {
   padding: 8px;
+}
+
+.helperIconsDiv {
+  float: right;
+}
+
+.helperIcon{
+  height: 16px;
+  width: 16px;
+}
+
+.noDisplay {
+  display: none;
 }
 
