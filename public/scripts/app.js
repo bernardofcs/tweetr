@@ -41,6 +41,12 @@ $(document).ready(function(){
         let $tweet = createTweetElement(tweets[tweet]);
         $('#tweets-container').append($tweet);
       }
+      $('.tweet').on('mouseenter', function(){            //icons when hovering - has to be inside the function or .tweet doesn't exist yet
+        $(this).find('footer').find('.helperIconsDiv').removeClass('noDisplay');
+      });
+      $('.tweet').on('mouseleave', function(){
+        $(this).find('footer').find('.helperIconsDiv').addClass('noDisplay');
+      });
 
   }
 
@@ -58,14 +64,6 @@ $(document).ready(function(){
     tweetFormat.append('<footer><span class="daysAgo">' + timeAgo + ' ' + unitTimeAgo +' ago</span><div class ="helperIconsDiv noDisplay"><img class="helperIcon" src="/images/flag.png"> <img class="helperIcon" src="/images/retweet.png"> <img class="helperIcon" src="/images/heart.png"></div></footer>')
     tweetFormat.append('</article>');
     tweetFormat.append('');
-
-    $('.tweet').on('mouseenter', function(){            //icons when hovering - has to be inside the function or .tweet doesn't exist yet
-      $(this).find('footer').find('.helperIconsDiv').removeClass('noDisplay');
-    });
-    $('.tweet').on('mouseleave', function(){
-      $(this).find('footer').find('.helperIconsDiv').addClass('noDisplay');
-    });
-
     return tweetFormat;
   }
 
