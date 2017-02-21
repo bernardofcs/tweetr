@@ -28,7 +28,7 @@ span.counter {
   border:2px solid #0000b2;
 }
 
-.new-tweet > form > h2{
+.new-tweet > h2{
   border-bottom: 1px solid;
 }
 

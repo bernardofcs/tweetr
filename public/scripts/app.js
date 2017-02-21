@@ -5,6 +5,19 @@
  */
 
 $(document).ready(function(){
+  event.preventDefault();
+  $('#tweet-form').submit(function(e){
+    const url = "/tweets";
+    $.ajax({
+      type:"POST",
+      url: url,
+      data:$('#tweet-form').serialize(),
+      success: function data(){
+
+      }
+    })
+    e.preventDefault();
+  });
 
 
   // Fake data taken from tweets.json
