@@ -31,6 +31,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button class="compose">Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -39,7 +40,9 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+
+        <!-- it seemed better to implement a max length instead of validating after that - I did still implement making it red if it was longer than 140 before, although not actually using it anymore -->
+          <textarea name="text" maxlength="140" placeholder="What are you humming about?" required></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
@@ -50,7 +53,7 @@
           <header>
             <img class="avatar" src="/images/bird.png">
             <span class="name">John Doe</span>
-            <span class="atUser">@johndoe</span>
+            <span class="atUser">@johndoe</span>                   //template
           </header>
           <p>
             I HATE TWEETING
