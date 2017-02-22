@@ -6,7 +6,7 @@
 
 $(document).ready(function(){
   $('.new-tweet').slideUp();
-  $('#nav-bar').find('.compose').on('click', function (){
+  $('#nav-bar').find('.compose').on('click', () => {
     $('.new-tweet').slideToggle();
     $('#tweet-form').find('textarea').focus();
   });
@@ -17,17 +17,25 @@ $(document).ready(function(){
       type:"POST",
       url: url,
       data:$('#tweet-form').serialize(),
-      success: loadTweets
+      success: () => {
+        loadTweets();
+        clearForm();
+      }
     })
     e.preventDefault();
   });
+
+  function clearForm(){
+    console.log('lul');
+    $('textarea').val('');
+  }
 
 
   function loadTweets(){                   //form submission for new tweet
     $.ajax({
       url:"/tweets",
       type:"GET",
-      success: function(data){
+      success: (data) => {
         renderTweets(data);
       }
     })
@@ -41,10 +49,10 @@ $(document).ready(function(){
         let $tweet = createTweetElement(tweets[tweet]);
         $('#tweets-container').append($tweet);
       }
-      $('.tweet').on('mouseenter', function(){            //icons when hovering - has to be inside the function or .tweet doesn't exist yet
+      $('.tweet').on('mouseenter', () => {            //icons when hovering - has to be inside the function or .tweet doesn't exist yet
         $(this).find('footer').find('.helperIconsDiv').removeClass('noDisplay');
       });
-      $('.tweet').on('mouseleave', function(){
+      $('.tweet').on('mouseleave', () => {
         $(this).find('footer').find('.helperIconsDiv').addClass('noDisplay');
       });
 
@@ -57,13 +65,11 @@ $(document).ready(function(){
     if(timeAgo === 1){
       unitTimeAgo = unitTimeAgo.slice(0, -1);
     }
-    let tweetFormat = $('<article class="tweet">');
-    tweetFormat.append('<header><img class="avatar" src="' + tweet.user.avatars.regular + '"><span class="name">' +
-      tweet.user.name + '</span><span class="atUser">' + tweet.user.handle + '</span></header>');
-    tweetFormat.append('<p>' + tweet.content.text + '</p>');
-    tweetFormat.append('<footer><span class="daysAgo">' + timeAgo + ' ' + unitTimeAgo +' ago</span><div class ="helperIconsDiv noDisplay"><img class="helperIcon" src="/images/flag.png"> <img class="helperIcon" src="/images/retweet.png"> <img class="helperIcon" src="/images/heart.png"></div></footer>')
-    tweetFormat.append('</article>');
-    tweetFormat.append('');
+    let tweetFormat = $(`<article class="tweet">
+                          <header><img class="avatar" src="${tweet.user.avatars.regular}"><span class="name">${tweet.user.name}</span><span class="atUser">${tweet.user.handle}</span></header>
+                          <p>${tweet.content.text}</p>
+                          <footer><span class="daysAgo">${timeAgo} ${unitTimeAgo} ago</span><div class ="helperIconsDiv noDisplay"><img class="helperIcon" src="/images/flag.png"> <img class="helperIcon" src="/images/retweet.png"> <img class="helperIcon" src="/images/heart.png"></div></footer>
+                        </article>`);
     return tweetFormat;
   }
 
@@ -87,5 +93,11 @@ $(document).ready(function(){
     return {time: time, unit: 'seconds'}
   }
 
+  // $('#tweetcontainer').on('mouseenter', '.tweet', function(){            (this) refers to the #containers instead
+  //   $(this).find('footer').find('.helperIconsDiv').removeClass('noDisplay');
+  // });
+  // $('#tweetcontainer').on('mouseleave', '.tweet', function(){
+  //   $(this).find('footer').find('.helperIconsDiv').addClass('noDisplay');
+  // });
 
 });

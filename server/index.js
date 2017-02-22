@@ -23,7 +23,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   console.log(`Connected to mongodb: ${db}`);
 
   const DataHelpers = require("./lib/data-helpers.js")(db);
-    const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+  const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
     // Mount the tweets routes at the "/tweets" path prefix:
     app.use("/tweets", tweetsRoutes);
