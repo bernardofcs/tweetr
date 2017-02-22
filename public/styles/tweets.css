@@ -1,73 +1,57 @@
-
-
-article.tweet {
+.tweet {
   border: 1px solid;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
   border-color: #7e7e7e;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
+  .tweet header {
+    height: 50px;
+    width: fill;
+    background-color: #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .tweet header .avatar {
+      float: left;
+      height: 40px;
+      width: 40px;
+      padding: 2px;
+      border: 1px solid;
+      border-color: #e3e3e3;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      margin: 5px; }
+    .tweet header .atUser {
+      float: right;
+      height: fill;
+      font-size: fill;
+      line-height: 2.5;
+      margin-right: 8px; }
+    .tweet header .name {
+      float: left;
+      height: fill;
+      font-size: 140%;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-left: 8px; }
+  .tweet footer {
+    border-top: 1px solid;
+    border-color: #e3e3e3;
+    padding: 5px; }
+    .tweet footer .helperIconsDiv {
+      float: right; }
+    .tweet footer .helperIcon {
+      height: 16px;
+      width: 16px; }
+  .tweet p {
+    padding: 8px; }
+  .tweet .noDisplay {
+    display: none; }
 
-article.tweet:hover {
-  border-color: black;
-}
+.tweet:hover {
+  border-color: black; }
 
-article.tweet > header {
-  height: 50px;
-  width: 100%;
-  background-color: #eee;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
-}
-
-.avatar {
-  float: left;
-  height: 40px;
-  width: 40px;
-  padding: 2px;
-  border: 1px solid;
-  border-color: #b3b3b3;
-  border-radius: 10px;
-  margin: 5px;
-}
-
-article.tweet > header > .name {
-  float:left;
-  height:100%;
-  font-size: 140%;
-  font-weight: bold;
-  line-height: 1.6;
-  margin-left: 8px;
-}
-
-article.tweet > header > .atUser {
-  float:right;
-  height:100%;
-  font-size: 100%;
-  line-height: 2.5;
-  margin-right: 8px;
-}
-
-article.tweet > footer {
-  border-top: 1px solid;
-  border-color: #b3b3b3;
-  padding: 5px;
-}
-
-article.tweet > p {
-  padding: 8px;
-}
-
-.helperIconsDiv {
-  float: right;
-}
-
-.helperIcon{
-  height: 16px;
-  width: 16px;
-}
-
-.noDisplay {
-  display: none;
-}
-
+/*# sourceMappingURL=tweets.css.map */

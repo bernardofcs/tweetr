@@ -1,0 +1,86 @@
+@import '_projectDefaults';
+
+@mixin border-radius($radius){
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+.tweet{
+
+  border: 1px solid;
+  @include border-radius($defaultradius);
+  border-color: $darkergray;
+  margin-top: $defaultspace;
+
+
+  header {
+    height: 50px;
+    width: fill;
+    background-color: $primarygray;
+    border-top-left-radius: $defaultradius;
+    border-top-right-radius: $defaultradius;
+
+    .avatar {
+      float: left;
+      height: 40px;
+      width: 40px;
+      padding: 2px;
+      border: 1px solid;
+      border-color: $lightergray;
+      @include border-radius($defaultradius);
+      margin: 5px;
+    }
+
+    .atUser {
+      float:right;
+      height:fill;
+      font-size: fill;
+      line-height: 2.5;
+      margin-right: $defaultspace * 0.8;
+    }
+
+    .name {
+      float:left;
+      height:fill;
+      font-size: 140%;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-left: $defaultspace * 0.8;
+    }
+
+  }
+
+
+
+  footer {
+    border-top: 1px solid;
+    border-color: $lightergray;
+    padding: 5px;
+
+    .helperIconsDiv {
+      float: right;
+    }
+
+    .helperIcon{
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  p {
+    padding: 8px;
+  }
+
+
+
+  .noDisplay {
+    display: none;
+  }
+}
+
+.tweet:hover {
+  border-color: black;
+}
+
+

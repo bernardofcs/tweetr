@@ -1,0 +1,30 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+@import '_projectDefaults';
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: $primarygray;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+  width: 450px;
+  height: $fill;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  padding-left:2em;
+  padding-right:2em;
+}

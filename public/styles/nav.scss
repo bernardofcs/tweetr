@@ -1,0 +1,42 @@
+@import '_projectDefaults';
+
+#nav-bar {
+  height: 80px;
+  width: $fill;
+  padding-right: 2em;
+  padding-left: 2em;
+  padding-top:$defaultspace;
+  position:fixed;
+  background-color: #00a087;
+  color: #e8fdff;
+
+  .logo {
+    float:left;
+    height: 75px;
+    width: 75px;
+  }
+
+  .header {
+    float:left;
+    height:$fill;
+    line-height:2;
+    margin-left: $defaultspace;
+    font-size: 200%;
+  }
+
+  .compose {
+    height: $fill * 0.85;
+    float: right;
+    background-color: #e5f5f3;
+    color: #00a087;
+    border: 1px solid #7e7e7e;
+    border-radius: $defaultspace;
+    font-size: 130%;
+  }
+
+  .compose:hover {
+    background-color: #F5F5DC;
+    color: $darkergray;
+  }
+}
+
