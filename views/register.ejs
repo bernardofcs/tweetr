@@ -10,6 +10,7 @@
   <nav id="nav-bar">
     <img class="logo" src="/images/bird.png">
     <span class="header">Tweeter</span>
+    <a href="/"><button class="login-main">Tweets Page</button></a>
   </nav>
     <main class="container">
       <form class="login-form" method="POST" action="/register">
@@ -17,8 +18,8 @@
         <input id="email" type="email" name="email" style="width: 300px"><br><br>
         <label for="password">Enter a password:</label><br>
         <input id="password" type="text" name="password" style="width: 300px"><br><br>
-        <input type="submit" value="Sign up">
-      </form>
+        <input class="submit-button" type="submit" value="Sign up"><br>
+      </form><br>
       <a id="change-button-link" href="/login"><button id="change-button">Already registered?</button></a>
     </main>
   </body>

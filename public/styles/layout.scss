@@ -39,14 +39,11 @@ body {
   padding-right:2em;
 }
 
-.login-form {
 
-}
-
-#change-button-link{
-
-}
-#change-button {
-
+.submit-button, #change-button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 120%;
+  border-radius: 0.9em;
+  height: 2em;
 }
 

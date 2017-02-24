@@ -24,4 +24,10 @@ body {
   padding-left: 2em;
   padding-right: 2em; }
 
+.submit-button, #change-button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 120%;
+  border-radius: 0.9em;
+  height: 2em; }
+
 /*# sourceMappingURL=layout.css.map */
