@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Tweetr </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  </head>
+  <body>
+  <% include partials/_navbar %>
+    <main class="container">
+      <form class="login-form" method="POST" action="/login">
+        <label for="email">Enter your email:</label><br>
+        <input id="email" type="text" name="email" style="width: 300px"><br><br>
+        <label for="password">Enter your password:</label><br>
+        <input id="password" type="text" name="password" style="width: 300px"><br><br>
+        <input type="submit" value="Sign in">
+      </form>
+      <a id="change-button-link" href="/register"><button id="change-button">Not registered?</button></a>
+    </main>
+  </body>
+</html>

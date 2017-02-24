@@ -1,7 +1,7 @@
 @import '_projectDefaults';
 
 #nav-bar {
-  height: 80px;
+  height: 5em;
   width: $fill;
   padding-right: 2em;
   padding-left: 2em;
@@ -12,8 +12,8 @@
 
   .logo {
     float:left;
-    height: 75px;
-    width: 75px;
+    height: 4.69em;
+    width: 4.69em;
   }
 
   .header {
@@ -27,6 +27,7 @@
   .compose {
     height: $fill * 0.85;
     float: right;
+    margin-right: 2px;
     background-color: #e5f5f3;
     color: #00a087;
     border: 1px solid #7e7e7e;
@@ -34,9 +35,25 @@
     font-size: 130%;
   }
 
-  .compose:hover {
+  .logout {
+    height: $fill * 0.85;
+    float: right;
+    margin-right: 2px
+  }
+
+  .logout-button:hover, .compose:hover {
     background-color: #F5F5DC;
     color: $darkergray;
   }
+
+  .logout-button {
+    height: $fill;
+    background-color: #e5f5f3;
+    color: #00a087;
+    border: 1px solid #7e7e7e;
+    border-radius: $defaultspace;
+    font-size: 130%;
+  }
+
 }
 

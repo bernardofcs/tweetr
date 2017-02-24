@@ -1,42 +1,42 @@
 .tweet {
   border: 1px solid;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
+  border-radius: 0.6125em;
+  -webkit-border-radius: 0.6125em;
+  -moz-border-radius: 0.6125em;
+  -ms-border-radius: 0.6125em;
   border-color: #7e7e7e;
-  margin-top: 10px; }
+  margin-top: 0.6125em; }
   .tweet header {
-    height: 50px;
+    height: 3.12em;
     width: fill;
     background-color: #eee;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px; }
+    border-top-left-radius: 0.6125em;
+    border-top-right-radius: 0.6125em; }
     .tweet header .avatar {
       float: left;
-      height: 40px;
-      width: 40px;
-      padding: 2px;
+      height: 2.5em;
+      width: 2.5em;
+      padding: 0.125em;
       border: 1px solid;
       border-color: #e3e3e3;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      margin: 5px; }
+      border-radius: 0.6125em;
+      -webkit-border-radius: 0.6125em;
+      -moz-border-radius: 0.6125em;
+      -ms-border-radius: 0.6125em;
+      margin: 0.31em; }
     .tweet header .atUser {
       float: right;
       height: fill;
       font-size: fill;
       line-height: 2.5;
-      margin-right: 8px; }
+      margin-right: 0.49em; }
     .tweet header .name {
       float: left;
       height: fill;
       font-size: 140%;
       font-weight: bold;
       line-height: 1.6;
-      margin-left: 8px; }
+      margin-left: 0.49em; }
   .tweet footer {
     border-top: 1px solid;
     border-color: #e3e3e3;
@@ -44,10 +44,10 @@
     .tweet footer .helperIconsDiv {
       float: right; }
     .tweet footer .helperIcon {
-      height: 16px;
-      width: 16px; }
+      height: 1em;
+      width: 1em; }
   .tweet p {
-    padding: 8px; }
+    padding: 0.5em; }
   .tweet .noDisplay {
     display: none; }
 

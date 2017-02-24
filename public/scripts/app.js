@@ -26,8 +26,8 @@ $(document).ready(function(){
   });
 
   function clearForm(){
-    console.log('lul');
     $('textarea').val('');
+    $('new-tweet').find('.counter').text('140');
   }
 
 
@@ -49,10 +49,10 @@ $(document).ready(function(){
         let $tweet = createTweetElement(tweets[tweet]);
         $('#tweets-container').append($tweet);
       }
-      $('.tweet').on('mouseenter', () => {            //icons when hovering - has to be inside the function or .tweet doesn't exist yet
+      $('.tweet').on('mouseenter', function(){            //icons when hovering - has to be inside the function or .tweet doesn't exist yet
         $(this).find('footer').find('.helperIconsDiv').removeClass('noDisplay');
       });
-      $('.tweet').on('mouseleave', () => {
+      $('.tweet').on('mouseleave', function(){
         $(this).find('footer').find('.helperIconsDiv').addClass('noDisplay');
       });
 
