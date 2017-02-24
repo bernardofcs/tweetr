@@ -10,15 +10,24 @@ body {
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif; }
 
+@media (max-width: 700px) {
+  body {
+    font-size: 36px; } }
 .container {
-  width: 450px;
+  width: 28.1em;
   height: 100%;
   background-color: white;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 8.8em;
+  padding-bottom: 8.8em;
   padding-left: 2em;
   padding-right: 2em; }
+
+.submit-button, #change-button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 120%;
+  border-radius: 0.9em;
+  height: 2em; }
 
 /*# sourceMappingURL=layout.css.map */

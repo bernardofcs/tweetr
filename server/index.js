@@ -6,12 +6,18 @@ const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
+const cookieSession = require('cookie-session');
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(cookieSession({
+  name: 'session',
+  keys: ['user_id', 'visitor_id'],
 
-// The in-memory database of tweets. It's a basic object with an array in it.
-//const db = require("./lib/in-memory-db");
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}));
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
@@ -24,10 +30,11 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
 
   const DataHelpers = require("./lib/data-helpers.js")(db);
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+  const usersRoutes = require("./routes/users")(DataHelpers);
 
     // Mount the tweets routes at the "/tweets" path prefix:
     app.use("/tweets", tweetsRoutes);
-
+    app.use("/", usersRoutes);
     app.listen(PORT, () => {
       console.log("Example app listening on port " + PORT);
     });
