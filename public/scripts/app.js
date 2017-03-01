@@ -11,23 +11,28 @@ $(document).ready(function(){
     $('#tweet-form').find('textarea').focus();
   });
   event.preventDefault();
-  $('#tweet-form').submit(function(e){       //ajax call to get tweets
+  $('#tweet-form').submit(function(e){
     const url = "/tweets";
-    $.ajax({
-      type:"POST",
-      url: url,
-      data:$('#tweet-form').serialize(),
-      success: () => {
-        loadTweets();
-        clearForm();
-      }
-    })
+    if($('textarea').val().length <= 140){
+      $.ajax({
+        type:"POST",
+        url: url,
+        data:$('#tweet-form').serialize(),
+        success: () => {
+          loadTweets();
+          clearForm();
+        }
+      });
+    }else{
+      alert('Tweet too long!');
+    }
+
     e.preventDefault();
   });
 
   function clearForm(){
     $('textarea').val('');
-    $('new-tweet').find('.counter').text('140');
+    $('.new-tweet').find('.counter').text('140');
   }
 
 
